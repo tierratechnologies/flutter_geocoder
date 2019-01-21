@@ -65,6 +65,9 @@ class Address {
 
   Address({this.coordinates, this.addressLine, this.countryName, this.countryCode, this.featureName, this.postalCode, this.adminArea, this.subAdminArea, this.locality, this.subLocality, this.thoroughfare, this.subThoroughfare});
 
+  @override
+  String toString() => 'addressLine: $addressLine\n countryName: $countryName\n countryCode: $countryCode\n featureName: $featureName\n postalCode: $postalCode\n adminArea: $adminArea\n subAdminArea: $subAdminArea\n locality: $locality\n subLocality: $subLocality\n thoroughfare: $thoroughfare\n subThoroughfare: $subThoroughfare';
+
   /// Creates an address from a map containing its properties.
   Address.fromMap(Map map) :
         this.coordinates = new Coordinates.fromMap(map["coordinates"]),
